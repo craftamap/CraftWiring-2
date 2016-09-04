@@ -65,7 +65,7 @@ function sendsocket(h, i, s){
 function sendgpio(i, m, s){
   $.ajax(
     {
-      url: "libs/sendsocket.php",
+      url: "libs/sendgpio.php",
       method: "POST",
       data:
       {
