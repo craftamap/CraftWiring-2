@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Gang",
+        "pin": "27",
+        "mode": 2
+    },
+    {
+        "name": "Vorplatz",
+        "pin": "10",
+        "mode": 1
+    }
+]

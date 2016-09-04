@@ -1,0 +1,46 @@
+main {
+  position: relative;
+}
+
+
+input, select {
+  background-color: #ECEFF1;
+  border: none;
+  border-bottom: solid rgb(55, 71, 79) 3px;
+  border-right: solid gray 1px;
+  color: black;
+  font-size: 12pt;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+input {
+  padding: 6px 2px;
+}
+
+input[type="number"] {
+  width:40px;
+}
+
+select {
+  padding: 5px 14px;
+}
+
+
+.configcontainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.configlable {
+  width: 45px;
+}
+
+.refresh {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}

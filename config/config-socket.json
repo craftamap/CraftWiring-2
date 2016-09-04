@@ -1,0 +1,29 @@
+{
+    "homecode": "11111",
+    "sockets": [
+        {
+            "name": "Lavalampe",
+            "socketadr": "3"
+        },
+        {
+            "name": "Tim Anlage",
+            "socketadr": "4"
+        },
+        {
+            "name": "RGB-LED1 Tim",
+            "socketadr": "2"
+        },
+        {
+            "name": "LED Bett",
+            "socketadr": "5"
+        },
+        {
+            "name": "Kommode",
+            "socketadr": "6"
+        },
+        {
+            "name": "Fabian LEDs",
+            "socketadr": "7"
+        }
+    ]
+}

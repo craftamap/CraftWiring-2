@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Config | CraftWiring v2</title>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/config.css">
+    <link rel="stylesheet" href="fonts/material-icons.css">
+    <script src="libs/jquery.js"></script>
+    <script src="libs/config.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>CraftWiring v2</h1>
+      <nav>
+        <ul>
+          <a href="index.html"><li>Index</li></a>
+          <a><li>config</li></a>
+          <li>More...</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <i class="material-icons md-24 md-dark refresh" onclick="loadgpio();loadsocket();">refresh</i>
+      <section id="gpio">
+        <h2>GPIO</h2>
+    <!--    <div class="configcontainer">
+          <div class="lable configlable" group="gpio10">10</div>
+          <input value="Vorplatz"/>
+          <select>
+            <option value="1">standard</option>
+            <option value="2" selected>latching</option>
+          </select>
+          <i class="material-icons md-24 md-dark">save</i>
+          <i class="material-icons md-24 md-dark">delete</i>
+        </div> -->
+
+
+        <h3>new</h3>
+        <div class="configcontainer new" group="new.g">
+          <input placeholder="0" type="number" min="0"/>
+          <input type="text" placeholder="Name" />
+          <select class="last">
+            <option value="1">standard</option>
+            <option value="2">latching</option>
+          </select>
+          <i class="material-icons md-24 md-dark" onclick="addgpio()">save</i>
+        </div>
+      </section>
+      <script>
+      loadgpio();
+      </script>
+      <section id="socket">
+        <h2>Sockets</h2>
+      <!--  <div class="configcontainer">
+          <div class="lable configlable">10</div>
+          <input value="Vorplatz" class="last"/>
+          <i class="material-icons md-24 md-dark">save</i>
+          <i class="material-icons md-24 md-dark">delete</i>
+        </div>-->
+        <h3>new</h3>
+        <div class="configcontainer new" group="new.s">
+          <input type="number" min="0" placeholder="1">
+          <input type="text" placeholder="Name" class="last">
+          <i class="material-icons md-24 md-dark" onclick="addsocket()">save</i>
+
+        </div>
+      </section>
+      <script>
+      loadsocket();
+      </script>
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>
