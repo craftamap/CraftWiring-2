@@ -65,7 +65,7 @@ function sendsocket(h, i, s){
 function sendgpio(i, m, s){
   $.ajax(
     {
-      url: "libs/sendgpio.php",
+      url: "http://192.168.178.88/CraftWiring-2/libs/sendgpio.php",
       method: "POST",
       data:
       {
