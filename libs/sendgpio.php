@@ -39,6 +39,7 @@ class sendgpio {
 }
 
 header("Content-Type: application/json");
+header('Access-Control-Allow-Origin: *');
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
   if($s = new sendgpio($_POST["pin"])) {
     if($s->idCheck($_POST["mode"])) {
