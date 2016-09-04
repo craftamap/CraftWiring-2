@@ -13,11 +13,11 @@ function gpio() {
           }
           if(a[i].mode == 1)
           {
-            $("#gpio").append("<div class='buttoncontainer'><div class='lable'></div><button onclick='gpiocontroller("+a[i].pin+", 1)'>On</button><button class='last' onclick='gpiocontroller("+a[i].pin+", 0)'>Off</button></div>");
+            $("#gpio").append("<div class='buttoncontainer'><div class='lable'></div><button onclick='sendgpio("+a[i].pin+","+a[i].mode+", 1)'>On</button><button class='last'  onclick='sendgpio("+a[i].pin+","+a[i].mode+", 0)'>Off</button></div>");
           }
           else if(a[i].mode == 2)
           {
-            $("#gpio").append("<div class='buttoncontainer'><div class='lable'></div><button class='last' onclick='gpiocontroller("+a[i].pin+", 2)'>Switch</button></div>");
+            $("#gpio").append("<div class='buttoncontainer'><div class='lable'></div><button class='last' onclick='sendgpio("+a[i].pin+","+a[i].mode+")'>Switch</button></div>");
           }
           $("#gpio .lable").last().text(a[i].name+" ("+a[i].pin+"):");
         }
@@ -59,6 +59,21 @@ function sendsocket(h, i, s){
     }
   ).done();
 
+}
 
+
+function sendgpio(i, m, s){
+  $.ajax(
+    {
+      url: "libs/sendsocket.php",
+      method: "POST",
+      data:
+      {
+        mode: m,
+        pin: i,
+        status: s
+      }
+    }
+  ).done();
 
 }
