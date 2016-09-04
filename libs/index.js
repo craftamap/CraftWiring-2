@@ -48,7 +48,19 @@ function sockets() {
 function sendsocket(h, i, s){
   $.ajax(
     {
-      url: "libs/sendsocket.php",
+      url: "http://192.168.178.44/CraftWiring-2/libs/sendsocket.php",
+      method: "POST",
+      data:
+      {
+        homecode: h,
+        id: i,
+        status: s
+      }
+    }
+  ).done();
+  $.ajax(
+    {
+      url: "http://192.168.178.88/CraftWiring-2/libs/sendsocket.php",
       method: "POST",
       data:
       {
