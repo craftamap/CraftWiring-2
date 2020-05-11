@@ -33,9 +33,13 @@ function sockets() {
   ).done(
     function(a)
       {
-        for(var i = 0; i < a.sockets.length; i++) {
-          $("#socket").append("<div class='buttoncontainer'><div class='lable'></div><button onclick='sendsocket("+a.homecode+","+a.sockets[i].socketadr+", 1)'>On</button><button class='last' onclick='sendsocket("+a.homecode+","+a.sockets[i].socketadr+", 0)'>Off</button></div>");
-          $(".lable").last().text(a.sockets[i].name+" ("+a.sockets[i].socketadr+"):");
+        console.log(a);
+        var b = a.sockets;
+        console.log(b);
+        for(var c in b) {
+          console.log(c);
+          $("#socket").append("<div class='buttoncontainer'><div class='lable'></div><button onclick='sendsocket("+a.homecode+","+b[c].socketadr+", 1)'>On</button><button class='last' onclick='sendsocket("+a.homecode+","+b[c].socketadr+", 0)'>Off</button></div>");
+          $(".lable").last().text(b[c].name+" ("+b[c].socketadr+"):");
 
         }
       }

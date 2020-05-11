@@ -11,7 +11,7 @@ class sendsocket {
   }
 
   function __destruct () {
-    //shell_exec("gpio unexport 17 ");
+    shell_exec("gpio unexport 17 ");
   }
 
   function idCheck($a)
@@ -44,10 +44,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       if($s->homecodeCheck($_POST["homecode"])) {
         $s->send($_POST["homecode"], $_POST["id"], $_POST["status"]);
         print(json_encode(array("status" => "success")));
-      }
-    }
-  }
+      } print("c");
+    } print("b");
+  } print("a");
 }
+
+
 
 
 
